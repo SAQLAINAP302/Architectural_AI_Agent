@@ -19,6 +19,25 @@ node_modules/
 # Testing
 /coverage
 
+# 🔑 ENVIRONMENT & CREDENTIAL FILES (CRITICAL: ENSURE SECRETS ARE EXCLUDED)
+# The file that caused the previous error:
+.env
+# All local .env files, including development and test variants
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+# Common credential file names
+*.token
+*.key
+*.pem
+*.pfx
+*.jks
+# Explicitly ignoring files often containing credentials/secrets (glob patterns)
+**/*token.json
+**/*credentials.json
+**/*secret*
+
 # Next.js
 /.next/
 /out/
@@ -30,11 +49,6 @@ next-env.d.ts
 dist/
 dist
 
-# Environment files (comprehensive coverage)
-
-*token.json*
-*credentials.json*
-
 # Logs and debug files
 npm-debug.log*
 yarn-debug.log*
@@ -44,7 +58,6 @@ dump.rdb
 
 # System files
 .DS_Store
-*.pem
 
 # Python
 __pycache__/
@@ -77,4 +90,4 @@ agenthub/agents/youtube/db
 .cache/
 
 # Mobile development
-android-sdk/ 
+android-sdk/
